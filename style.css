@@ -1,0 +1,49 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	color: #fff;
+	height: 100vh;
+}
+
+button {
+	padding: 1rem 2rem;
+	color: #fff;
+	background-color: rgb(93, 50, 50);
+	border: none;
+	cursor: pointer;
+	margin: 0.8rem 0;
+	font-size: 14px;
+	overflow: hidden;
+	position: relative;
+}
+
+button:active {
+	outline: 0;
+	transform: scale(0.98);
+}
+
+button .circle {
+	position: absolute;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	background-color: rgb(242, 44, 44);
+	opacity: 0.8;
+	transform: translate(-50%, -50%) scale(0);
+	animation: scale 0.8s ease-out;
+}
+
+@keyframes scale {
+	to {
+		transform: translate(-50%, -50%) scale(1.5);
+		opacity: 0;
+	}
+}
